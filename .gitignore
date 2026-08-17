@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+
+# Env (ne jamais committer les vraies clés)
+.env
+.env.local
+.env.*.local
+
+# Build / cache
+tsconfig.tsbuildinfo
+*.tsbuildinfo
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.log
+
+# Vercel
+.vercel
+
+# Ingestion RAG (cache local reprenable)
+.ingest-cache/

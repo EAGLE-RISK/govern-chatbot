@@ -1,0 +1,39 @@
+{
+  "name": "govern-chatbot",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Backend API chatbot IA pour Govern One (Gemini + RAG)",
+  "scripts": {
+    "dev": "next dev -p 1337",
+    "build": "next build",
+    "start": "next start -p 1337",
+    "lint": "eslint",
+    "content:generate": "node scripts/generate-content-from-landing.mjs",
+    "test:chat": "node scripts/test-chat.mjs",
+    "test:cors": "node scripts/test-cors.mjs",
+    "test:prod": "node scripts/test-chat.mjs https://govern-chatbot.vercel.app && node scripts/test-cors.mjs https://govern-chatbot.vercel.app https://www.govern-one.com",
+    "test:supabase": "tsx scripts/test-supabase.ts",
+    "test:gemini-keys": "tsx scripts/test-gemini-keys.ts",
+    "ingest": "tsx scripts/ingest.ts"
+  },
+  "dependencies": {
+    "@google/genai": "^2.16.0",
+    "@supabase/supabase-js": "^2.112.3",
+    "next": "16.3.0",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/eslintrc": "^3",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "baseline-browser-mapping": "^2.11.14",
+    "dotenv": "^17.4.2",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.0",
+    "tsx": "^4.23.11",
+    "typescript": "^5"
+  }
+}
